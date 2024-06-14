@@ -20,10 +20,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python 3.10
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: "3.10"
+        python-version: "3.12"
     - name: Install X11
       run: |
         sudo apt-get update 
@@ -51,10 +51,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python 3.10
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: "3.10"
+        python-version: "3.12"
     
     - name: Install dependencies
       run: |
@@ -85,6 +85,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest
           pip install -r support/requirements.txt
+          python -m pip install docutils pygments pypiwin32 kivy_deps.sdl2 kivy_deps.glew;
+          
     - name: Lint with flake8
       run: |
         flake8 --ignore=E402,E501
