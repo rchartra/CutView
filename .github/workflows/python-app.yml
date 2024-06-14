@@ -61,6 +61,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install -r support/requirements.txt
+        python -m pip install docutils pygments pypiwin32 kivy["sdl2"] kivy["glew"]
     - name: Lint with flake8
       run: |
         flake8 --ignore=E402,E501
