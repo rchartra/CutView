@@ -7,8 +7,3 @@ xarray
 netCDF4
 opencv-python
 img2pdf
-docutils
-pygments
-pypiwin32
-kivy["sdl2"]
-kivy["glew"]
