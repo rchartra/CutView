@@ -78,9 +78,10 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.12"
-    - name: Install X11
+    - name: Install X11 and sdl2 dependencies
       run: |
           brew install xquartz --cask
+          brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer
     - name: Install dependencies
       run: |
           python -m pip install --upgrade pip
