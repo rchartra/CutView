@@ -41,7 +41,7 @@ jobs:
         flake8 --ignore=E402,E501
     - name: Test with unittest
       run: |
-        pytest
+        pytest -s
         
   windows_test:
     runs-on: windows-latest
@@ -66,7 +66,7 @@ jobs:
         flake8 --ignore=E402,E501
     - name: Test with unittest
       run: |
-        pytest
+        pytest -s
 
   mac_test:
     runs-on: macos-latest
