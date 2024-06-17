@@ -87,7 +87,7 @@ jobs:
       run: |
           python -m pip install --upgrade pip
           pip install flake8 pytest
-          pip install "kivy[sdl2]"
+          pip install "kivy[base]"
           pip install -r support/requirements.txt
           pip install --force-reinstall numpy==1.26.4
     - name: Lint with flake8
