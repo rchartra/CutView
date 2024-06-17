@@ -83,11 +83,11 @@ jobs:
       run: |
           brew install xquartz --cask
           brew reinstall --build-from-source sdl2 sdl2_image sdl2_ttf sdl2_mixer
+          brew install glfw3
     - name: Install dependencies
       run: |
           python -m pip install --upgrade pip
           pip install flake8 pytest
-          pip install "kivy[angle]"
           pip install -r support/requirements.txt
           pip install --force-reinstall numpy==1.26.4
     - name: Lint with flake8
